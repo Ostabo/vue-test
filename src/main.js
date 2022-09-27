@@ -14,6 +14,7 @@ const routes = [
     {path: '/home', component: HomePage},
     {path: '/game', component: GameField},
     {path: '/about', component: AboutPage},
+    {path: '/:pathMatch(.*)*', redirect: '/home'},
 ]
 
 // 3. Create the router instance and pass the `routes` option
