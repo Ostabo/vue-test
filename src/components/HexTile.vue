@@ -1,12 +1,11 @@
 <template>
-  <div class="hex-tile" :style="style">
+  <div :style="style" class="hex-tile">
     {{ getContent }}
   </div>
 </template>
 
 <script>
-import {RED, BLUE} from "@/App";
-
+import {BLUE, RED} from "@/App";
 
 export default {
   name: "HexTile",
@@ -54,6 +53,7 @@ export default {
 }
 
 .hex-tile:hover {
+  cursor: pointer;
   scale: 1.2;
 }
 </style>
