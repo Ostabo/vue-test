@@ -74,6 +74,9 @@ export default {
       return this.hexField.get(`${x}:${y}`);
     },
     clickTile(i, n) {
+      if (this.hexField.get(`${i}:${n}`) !== EMPTY) {
+        return;
+      }
       this.hexField.set(`${i}:${n}`, this.turn);
 
       this.neighbors.get(`${i}:${n}`).forEach(neighbor => {
@@ -105,6 +108,7 @@ export default {
   border: .2em solid var(--turn);
 
   transition: all .4s linear;
+  user-select: none;
 }
 
 *:not(.wrapper *) {
